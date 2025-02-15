@@ -47,6 +47,7 @@ export default function ContactForm() {
           fromData,
           "_jyI4fcQ0-EZyBA7D"
         )
+        // eslint-disable-next-line no-unused-vars
         .then((response) => {
           toast.success("Message sent successfully!");
           setFromData({ name: "", email: "", message: "" });
@@ -65,7 +66,7 @@ export default function ContactForm() {
     <div className="p-4 lg:w-3/4" id="contact">
       <Toaster />
       <h2 className="my-8 text-center text-4xl font-semibold tracking-tighter">
-        Let's Connect
+        Let&apos;s Connect
       </h2>
       <motion.form
         initial={{ opacity: 0 }}
@@ -81,7 +82,7 @@ export default function ContactForm() {
               name="name"
               value={fromData.name}
               placeholder="Name"
-              onChange={() => handleChange}
+              onChange={handleChange}
             />
             {error.name && (
               <motion.p
